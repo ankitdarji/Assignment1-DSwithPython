@@ -15,6 +15,7 @@ sns.boxplot(data=df, y='MEDV')
 plt.title('Boxplot of Median Value of Owner-Occupied Homes')
 plt.ylabel('Median Value (in $1000)')
 plt.show()
+print("Observation: = Majority Owner-occupoied between 17 to 25 with median around 21-22.")
 
 # Query 2: Bar plot for the Charles River variable (CHAS)
 plt.figure(figsize=(8, 6))
@@ -24,6 +25,7 @@ plt.title('Bar Plot of Charles River Variable')
 plt.xlabel('CHAS (1: Near River, 0: Not Near River)')
 plt.ylabel('Count')
 plt.show()
+print("Observation: = Count is very high for not near river CHAS")
 
 # Query 3: Boxplot for MEDV vs AGE (discretized AGE groups)
 df['AGE_GROUP'] = pd.cut(df['AGE'], bins=[0, 35, 70, 100], labels=['<=35', '35-70', '>70'])
@@ -33,6 +35,7 @@ plt.title('Boxplot of MEDV by AGE Groups')
 plt.xlabel('Age Groups')
 plt.ylabel('Median Value (in $1000)')
 plt.show()
+print("Observation: = With the increase of Age above 35, vakues are decreasing")
 
 # Query 4: Scatter plot for Nitric Oxide concentrations vs Non-retail business acres per town
 plt.figure(figsize=(8, 6))
@@ -50,3 +53,7 @@ plt.title('Histogram of Pupil-to-Teacher Ratio')
 plt.xlabel('Pupil-to-Teacher Ratio')
 plt.ylabel('Frequency')
 plt.show()
+print("Observation: Majority of schools have pupil-to-teacher ratio clustered around 20. Lower and higher ratios are much less frequent")
+
+
+
